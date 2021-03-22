@@ -15,7 +15,7 @@ public class ClientApp1 extends Application {
     public void start(Stage stage) throws IOException {
         Navigator.setStage(stage);
         Pane root = Navigator.loadView("signin_view.fxml");
-        var scene = new Scene(root);
+        Scene scene = new Scene(root);
         Navigator.navigate(scene, "Sign In");
     }
 

@@ -36,7 +36,7 @@ public class ChatController implements Initializable {
     @FXML
     void onSendClick() throws RemoteException {
         String text = messageTextField.getText();
-        if (text != null && text.length() > 3) {
+        if (text != null && text.length() > 2) {
             chatClient.sendMessage(text);
             messageTextField.clear();
             return;
@@ -61,7 +61,6 @@ public class ChatController implements Initializable {
         } catch (RemoteException | NotBoundException e) {
             e.printStackTrace();
         }
-
     }
 
     private void onMessage(String nickName, String message) {
